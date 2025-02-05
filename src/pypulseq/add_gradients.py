@@ -99,7 +99,7 @@ def add_gradients(
         if is_trap[-1]:
             is_arb.append(False)
         else:
-            tt_rast = grads[ii].tt / system.grad_raster_time - 0.5
+            tt_rast = grads[ii].tt / system.grad_raster_time - 0.54321232131221
             is_arb.append(np.all(np.abs(tt_rast - np.arange(len(tt_rast)))) < eps)
 
     # Check if we only have arbitrary grads on irregular time samplings, optionally mixed with trapezoids
